@@ -3,6 +3,36 @@
 
 :root {
   color-scheme: light;
+  --bg: #f5f9ff;
+  --bg-soft: #edf5ff;
+  --surface: rgba(255, 255, 255, 0.82);
+  --surface-strong: #ffffff;
+  --surface-muted: #eef6ff;
+  --border: rgba(148, 163, 184, 0.2);
+  --text: #0f172a;
+  --text-muted: #475569;
+  --heading: #020617;
+  --primary: #2563eb;
+  --primary-strong: #1d4ed8;
+  --accent: #0ea5e9;
+  --glow: rgba(37, 99, 235, 0.18);
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #081121;
+  --bg-soft: #0d1a31;
+  --surface: rgba(10, 19, 36, 0.78);
+  --surface-strong: #0f172a;
+  --surface-muted: #13213d;
+  --border: rgba(148, 163, 184, 0.18);
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
+  --heading: #f8fafc;
+  --primary: #60a5fa;
+  --primary-strong: #38bdf8;
+  --accent: #22d3ee;
+  --glow: rgba(56, 189, 248, 0.18);
 }
 
 html {
@@ -11,13 +41,23 @@ html {
 
 body {
   min-height: 100vh;
-  background: #ffffff;
-  color: #0f172a;
+  background: var(--bg);
+  color: var(--text);
   font-family: "Manrope", sans-serif;
+  transition:
+    background-color 300ms ease,
+    color 300ms ease;
 }
 
 * {
-  border-color: rgba(148, 163, 184, 0.16);
+  border-color: var(--border);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
 }
 
 ::selection {
@@ -30,13 +70,54 @@ body {
 }
 
 .glass-panel {
-  @apply border border-sky-100 bg-white/80 shadow-[0_24px_60px_rgba(15,23,42,0.06)] backdrop-blur-xl;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+  @apply backdrop-blur-xl;
 }
 
 .section-heading {
   @apply text-3xl font-semibold tracking-tight md:text-4xl;
+  color: var(--heading);
 }
 
 .section-copy {
   @apply max-w-2xl text-sm leading-7 md:text-base;
+  color: var(--text-muted);
+}
+
+.theme-text {
+  color: var(--text);
+}
+
+.theme-text-muted {
+  color: var(--text-muted);
+}
+
+.theme-surface {
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.theme-surface-strong {
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
+}
+
+.theme-surface-muted {
+  background: var(--surface-muted);
+  border: 1px solid var(--border);
+}
+
+.theme-ring {
+  box-shadow: 0 24px 70px var(--glow);
+}
+
+.theme-transition {
+  transition:
+    background-color 300ms ease,
+    color 300ms ease,
+    border-color 300ms ease,
+    box-shadow 300ms ease,
+    transform 300ms ease;
 }

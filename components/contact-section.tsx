@@ -17,24 +17,24 @@ export function ContactSection() {
           transition={{ duration: 0.6 }}
         >
           <SectionBadge>Contact</SectionBadge>
-          <h2 className="section-heading mt-6 text-slate-950">Clean contact experience with placeholder details.</h2>
-          <p className="section-copy mt-5 text-slate-600">
+          <h2 className="section-heading mt-6">Clean contact experience with placeholder details.</h2>
+          <p className="section-copy mt-5">
             This form is presentational for now, giving you a polished contact section while we keep the
             backend and submission flow separate.
           </p>
 
           <div className="mt-8 space-y-4">
             {contactDetails.map((item) => (
-              <div key={item.label} className="rounded-2xl border border-sky-100 bg-white px-5 py-4 shadow-sm">
-                <div className="text-xs uppercase tracking-[0.2em] text-slate-400">{item.label}</div>
-                <div className="mt-2 text-sm text-slate-700">{item.value}</div>
+              <div key={item.label} className="theme-transition rounded-2xl px-5 py-4 glass-panel">
+                <div className="text-xs uppercase tracking-[0.2em] text-[var(--text-muted)]">{item.label}</div>
+                <div className="mt-2 text-sm text-[var(--text)]">{item.value}</div>
               </div>
             ))}
           </div>
         </motion.div>
 
         <motion.form
-          className="rounded-[2rem] border border-sky-100 bg-white p-6 shadow-[0_24px_60px_rgba(15,23,42,0.06)] md:p-8"
+          className="theme-transition rounded-[2rem] p-6 glass-panel md:p-8"
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.25 }}
@@ -48,22 +48,22 @@ export function ContactSection() {
               { label: "Phone", type: "text", placeholder: "+91" }
             ].map((field) => (
               <label key={field.label} className="block">
-                <span className="mb-2 block text-sm text-slate-600">{field.label}</span>
+                <span className="mb-2 block text-sm text-[var(--text-muted)]">{field.label}</span>
                 <input
                   type={field.type}
                   placeholder={field.placeholder}
-                  className="w-full rounded-2xl border border-sky-100 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-sky-300 focus:bg-white"
+                  className="theme-transition w-full rounded-2xl border bg-[var(--surface-muted)] px-4 py-3 text-sm text-[var(--text)] outline-none placeholder:text-[var(--text-muted)] focus:border-[var(--primary)] focus:bg-[var(--surface-strong)]"
                 />
               </label>
             ))}
           </div>
 
           <label className="mt-5 block">
-            <span className="mb-2 block text-sm text-slate-600">Project details</span>
+            <span className="mb-2 block text-sm text-[var(--text-muted)]">Project details</span>
             <textarea
               rows={5}
               placeholder="Tell us about ERP, payroll, POS, cloud, or automation needs..."
-              className="w-full rounded-[1.5rem] border border-sky-100 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-sky-300 focus:bg-white"
+              className="theme-transition w-full rounded-[1.5rem] border bg-[var(--surface-muted)] px-4 py-3 text-sm text-[var(--text)] outline-none placeholder:text-[var(--text-muted)] focus:border-[var(--primary)] focus:bg-[var(--surface-strong)]"
             />
           </label>
 
