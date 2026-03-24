@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: #ffffff;
+  color: #0f172a;
+  font-family: "Manrope", sans-serif;
+}
+
+* {
+  border-color: rgba(148, 163, 184, 0.16);
+}
+
+::selection {
+  background: rgba(96, 165, 250, 0.3);
+  color: #ffffff;
+}
+
+.section-shell {
+  @apply mx-auto w-full max-w-7xl px-6 md:px-10 lg:px-12;
+}
+
+.glass-panel {
+  @apply border border-sky-100 bg-white/80 shadow-[0_24px_60px_rgba(15,23,42,0.06)] backdrop-blur-xl;
+}
+
+.section-heading {
+  @apply text-3xl font-semibold tracking-tight md:text-4xl;
+}
+
+.section-copy {
+  @apply max-w-2xl text-sm leading-7 md:text-base;
+}
