@@ -8,7 +8,9 @@
   --surface: rgba(255, 255, 255, 0.82);
   --surface-strong: #ffffff;
   --surface-muted: #eef6ff;
+  --surface-tint: rgba(37, 99, 235, 0.08);
   --border: rgba(148, 163, 184, 0.2);
+  --border-strong: rgba(37, 99, 235, 0.18);
   --text: #0f172a;
   --text-muted: #475569;
   --heading: #020617;
@@ -21,6 +23,8 @@
 html[data-color-theme="ocean"] {
   --bg-soft: #edf5ff;
   --surface-muted: #eef6ff;
+  --surface-tint: rgba(37, 99, 235, 0.08);
+  --border-strong: rgba(37, 99, 235, 0.18);
   --primary: #2563eb;
   --primary-strong: #1d4ed8;
   --accent: #0ea5e9;
@@ -30,6 +34,8 @@ html[data-color-theme="ocean"] {
 html[data-color-theme="emerald"] {
   --bg-soft: #ecfdf5;
   --surface-muted: #dff7ef;
+  --surface-tint: rgba(5, 150, 105, 0.1);
+  --border-strong: rgba(5, 150, 105, 0.22);
   --primary: #059669;
   --primary-strong: #047857;
   --accent: #14b8a6;
@@ -39,6 +45,8 @@ html[data-color-theme="emerald"] {
 html[data-color-theme="violet"] {
   --bg-soft: #f5f3ff;
   --surface-muted: #eee7ff;
+  --surface-tint: rgba(124, 58, 237, 0.1);
+  --border-strong: rgba(124, 58, 237, 0.22);
   --primary: #7c3aed;
   --primary-strong: #6d28d9;
   --accent: #a855f7;
@@ -48,6 +56,8 @@ html[data-color-theme="violet"] {
 html[data-color-theme="sunset"] {
   --bg-soft: #fff7ed;
   --surface-muted: #ffedd5;
+  --surface-tint: rgba(234, 88, 12, 0.1);
+  --border-strong: rgba(234, 88, 12, 0.22);
   --primary: #ea580c;
   --primary-strong: #c2410c;
   --accent: #f59e0b;
@@ -56,18 +66,26 @@ html[data-color-theme="sunset"] {
 
 html[data-theme="dark"][data-color-theme="ocean"] {
   --surface-muted: #13213d;
+  --surface-tint: rgba(96, 165, 250, 0.14);
+  --border-strong: rgba(96, 165, 250, 0.24);
 }
 
 html[data-theme="dark"][data-color-theme="emerald"] {
   --surface-muted: #112821;
+  --surface-tint: rgba(16, 185, 129, 0.14);
+  --border-strong: rgba(16, 185, 129, 0.24);
 }
 
 html[data-theme="dark"][data-color-theme="violet"] {
   --surface-muted: #211538;
+  --surface-tint: rgba(168, 85, 247, 0.14);
+  --border-strong: rgba(168, 85, 247, 0.24);
 }
 
 html[data-theme="dark"][data-color-theme="sunset"] {
   --surface-muted: #352014;
+  --surface-tint: rgba(249, 115, 22, 0.14);
+  --border-strong: rgba(249, 115, 22, 0.24);
 }
 
 html[data-theme="dark"] {
@@ -120,7 +138,7 @@ textarea {
 }
 
 .glass-panel {
-  background: var(--surface);
+  background: linear-gradient(180deg, var(--surface-tint), var(--surface));
   border: 1px solid var(--border);
   box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
   @apply backdrop-blur-xl;
@@ -156,7 +174,7 @@ textarea {
 
 .theme-surface-muted {
   background: var(--surface-muted);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-strong);
 }
 
 .theme-ring {

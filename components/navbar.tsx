@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, Menu, Sparkles, X } from "lucide-react";
 import { useCallback, useRef, useState } from "react";
-import { AnimatedButton } from "@/components/animated-button";
 import { ThemeSelector } from "@/components/theme-selector";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { useClickOutside } from "@/hooks/use-click-outside";
@@ -159,9 +158,6 @@ export function Navbar() {
           <div className="relative z-10 hidden items-center gap-3 lg:flex">
             <ThemeSelector />
             <ThemeToggle />
-            <AnimatedButton href="/contact" className="px-5 py-2.5">
-              Contact Us
-            </AnimatedButton>
           </div>
 
           <div className="relative z-10 flex items-center gap-2 lg:hidden">
@@ -265,12 +261,6 @@ export function Navbar() {
                         {link.label}
                       </Link>
                     ))}
-                </div>
-
-                <div className="mt-4">
-                  <AnimatedButton href="/contact" className="w-full">
-                    Contact Us
-                  </AnimatedButton>
                 </div>
               </div>
             </motion.div>
