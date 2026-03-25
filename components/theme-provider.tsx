@@ -14,6 +14,11 @@ type ThemeContextType = {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
+function applyTheme(nextTheme: Theme, nextColorTheme: ColorTheme) {
+  document.documentElement.dataset.theme = nextTheme;
+  document.documentElement.dataset.colorTheme = nextColorTheme;
+}
+
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>("light");
   const [colorTheme, setColorThemeState] = useState<ColorTheme>("ocean");
@@ -24,8 +29,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     const preferredDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     const nextTheme = storedTheme ?? (preferredDark ? "dark" : "light");
     const nextColorTheme = storedColorTheme ?? "ocean";
-    document.documentElement.dataset.theme = nextTheme;
-    document.documentElement.dataset.colorTheme = nextColorTheme;
+    applyTheme(nextTheme, nextColorTheme);
     setTheme(nextTheme);
     setColorThemeState(nextColorTheme);
   }, []);
@@ -37,12 +41,12 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       toggleTheme: () => {
         const nextTheme = theme === "light" ? "dark" : "light";
         setTheme(nextTheme);
-        document.documentElement.dataset.theme = nextTheme;
+        applyTheme(nextTheme, colorTheme);
         window.localStorage.setItem("theme", nextTheme);
       },
       setColorTheme: (nextColorTheme: ColorTheme) => {
         setColorThemeState(nextColorTheme);
-        document.documentElement.dataset.colorTheme = nextColorTheme;
+        applyTheme(theme, nextColorTheme);
         window.localStorage.setItem("color-theme", nextColorTheme);
       }
     }),

@@ -19,6 +19,8 @@
 }
 
 html[data-color-theme="ocean"] {
+  --bg-soft: #edf5ff;
+  --surface-muted: #eef6ff;
   --primary: #2563eb;
   --primary-strong: #1d4ed8;
   --accent: #0ea5e9;
@@ -26,6 +28,8 @@ html[data-color-theme="ocean"] {
 }
 
 html[data-color-theme="emerald"] {
+  --bg-soft: #ecfdf5;
+  --surface-muted: #dff7ef;
   --primary: #059669;
   --primary-strong: #047857;
   --accent: #14b8a6;
@@ -33,6 +37,8 @@ html[data-color-theme="emerald"] {
 }
 
 html[data-color-theme="violet"] {
+  --bg-soft: #f5f3ff;
+  --surface-muted: #eee7ff;
   --primary: #7c3aed;
   --primary-strong: #6d28d9;
   --accent: #a855f7;
@@ -40,10 +46,28 @@ html[data-color-theme="violet"] {
 }
 
 html[data-color-theme="sunset"] {
+  --bg-soft: #fff7ed;
+  --surface-muted: #ffedd5;
   --primary: #ea580c;
   --primary-strong: #c2410c;
   --accent: #f59e0b;
   --glow: rgba(234, 88, 12, 0.2);
+}
+
+html[data-theme="dark"][data-color-theme="ocean"] {
+  --surface-muted: #13213d;
+}
+
+html[data-theme="dark"][data-color-theme="emerald"] {
+  --surface-muted: #112821;
+}
+
+html[data-theme="dark"][data-color-theme="violet"] {
+  --surface-muted: #211538;
+}
+
+html[data-theme="dark"][data-color-theme="sunset"] {
+  --surface-muted: #352014;
 }
 
 html[data-theme="dark"] {
@@ -65,7 +89,9 @@ html {
 
 body {
   min-height: 100vh;
-  background: var(--bg);
+  background:
+    radial-gradient(circle at top, var(--glow), transparent 26%),
+    linear-gradient(180deg, var(--bg-soft) 0%, var(--bg) 34%, var(--bg) 100%);
   color: var(--text);
   font-family: "Manrope", sans-serif;
   transition:

@@ -2,8 +2,9 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { Palette } from "lucide-react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useTheme } from "@/components/theme-provider";
+import { useClickOutside } from "@/hooks/use-click-outside";
 
 const colorThemes = [
   { id: "ocean", label: "Ocean", swatch: "from-blue-600 to-sky-400" },
@@ -15,9 +16,12 @@ const colorThemes = [
 export function ThemeSelector() {
   const { colorTheme, setColorTheme } = useTheme();
   const [open, setOpen] = useState(false);
+  const selectorRef = useRef<HTMLDivElement | null>(null);
+
+  useClickOutside(selectorRef, () => setOpen(false), open);
 
   return (
-    <div className="relative">
+    <div ref={selectorRef} className="relative z-[60]">
       <motion.button
         type="button"
         onClick={() => setOpen((current) => !current)}
@@ -28,7 +32,7 @@ export function ThemeSelector() {
         aria-label="Choose color theme"
       >
         <Palette className="h-4 w-4 text-[var(--primary)]" />
-        Theme
+        <span className="capitalize">{colorTheme}</span>
       </motion.button>
 
       <AnimatePresence>
@@ -38,11 +42,11 @@ export function ThemeSelector() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 8 }}
             transition={{ duration: 0.2 }}
-            className="absolute right-0 z-50 mt-3 w-48 rounded-2xl p-3 glass-panel"
+            className="absolute right-0 z-[70] mt-3 w-52 rounded-2xl p-3 glass-panel"
           >
             <div className="space-y-2">
               {colorThemes.map((theme) => (
-                <button
+                <motion.button
                   key={theme.id}
                   type="button"
                   onClick={() => {
@@ -52,10 +56,13 @@ export function ThemeSelector() {
                   className={`theme-transition flex w-full items-center gap-3 rounded-xl px-3 py-2 text-left ${
                     colorTheme === theme.id ? "theme-surface-muted" : "hover:bg-[var(--surface-muted)]"
                   }`}
+                  whileHover={{ x: 3, scale: 1.01 }}
+                  whileTap={{ scale: 0.98 }}
+                  transition={{ type: "spring", stiffness: 320, damping: 22 }}
                 >
                   <span className={`h-6 w-6 rounded-full bg-gradient-to-br ${theme.swatch}`} />
                   <span className="text-sm font-medium text-[var(--heading)]">{theme.label}</span>
-                </button>
+                </motion.button>
               ))}
             </div>
           </motion.div>

@@ -38,26 +38,36 @@ export function Navbar() {
     >
       <div ref={navRef} className="relative">
         <nav
-          className={`theme-transition flex items-center justify-between rounded-3xl px-4 py-3 sm:px-5 md:rounded-full md:px-6 ${
+          className={`theme-transition relative flex items-center justify-between rounded-3xl px-4 py-3 sm:px-5 md:rounded-full md:px-6 ${
             isScrolled
-              ? "border border-[var(--border)] bg-[color:var(--surface)]/90 shadow-[0_24px_60px_var(--glow)] backdrop-blur-2xl"
-              : "glass-panel"
+              ? "border border-white/20 bg-[color:var(--surface)]/72 shadow-[0_24px_60px_var(--glow)] backdrop-blur-2xl"
+              : "border border-white/20 bg-[color:var(--surface)]/62 shadow-[0_18px_40px_rgba(255,255,255,0.08),0_24px_60px_var(--glow)] backdrop-blur-2xl"
           }`}
         >
-          <Link href="/" className="flex items-center gap-3 text-sm font-semibold tracking-wide text-[var(--heading)]">
+          <div className="pointer-events-none absolute inset-0 overflow-hidden rounded-[inherit]">
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.32),rgba(255,255,255,0.06)_42%,rgba(255,255,255,0.02))]" />
+            <div className="absolute inset-x-[8%] top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.9),transparent)]" />
+            <div className="absolute -left-10 top-0 h-full w-28 rotate-12 bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.22),transparent)] blur-xl" />
+            <div className="absolute inset-x-0 bottom-0 h-px bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.25),transparent)]" />
+          </div>
+
+          <Link href="/" className="relative z-10 flex items-center gap-3 text-sm font-semibold tracking-wide text-[var(--heading)]">
             <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[linear-gradient(135deg,var(--primary),var(--accent))] text-white shadow-lg shadow-sky-200">
               <Sparkles className="h-4 w-4" />
             </span>
             CompactSoft
           </Link>
 
-          <div className="hidden items-center gap-6 text-sm lg:flex">
-            <Link
-              href="/"
-              className={`theme-transition ${pathname === "/" ? "text-[var(--primary)]" : "text-[var(--text-muted)] hover:text-[var(--primary)]"}`}
-            >
-              Home
-            </Link>
+          <div className="relative z-10 hidden items-center gap-6 text-sm lg:flex">
+            <motion.div whileHover={{ y: -2, scale: 1.04 }} whileTap={{ scale: 0.98 }} transition={{ type: "spring", stiffness: 320, damping: 20 }}>
+              <Link
+                href="/"
+                className={`group theme-transition relative inline-flex ${pathname === "/" ? "text-[var(--primary)]" : "text-[var(--text-muted)] hover:text-[var(--primary)]"}`}
+              >
+                <span>Home</span>
+                <span className={`absolute -bottom-1 left-0 h-0.5 rounded-full bg-[var(--primary)] transition-all duration-300 ${pathname === "/" ? "w-full" : "w-0 group-hover:w-full"}`} />
+              </Link>
+            </motion.div>
 
             <div
               className="relative"
@@ -67,13 +77,14 @@ export function Navbar() {
               <motion.button
                 type="button"
                 onClick={() => setMegaOpen((current) => !current)}
-                className={`theme-transition inline-flex items-center gap-1 ${pathname === "/services" || pathname === "/erp" ? "text-[var(--primary)]" : "text-[var(--text-muted)] hover:text-[var(--primary)]"}`}
+                className={`group theme-transition relative inline-flex items-center gap-1 ${pathname === "/services" || pathname === "/erp" ? "text-[var(--primary)]" : "text-[var(--text-muted)] hover:text-[var(--primary)]"}`}
                 whileHover={{ y: -2, scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 transition={{ type: "spring", stiffness: 320, damping: 20 }}
               >
                 Services
                 <ChevronDown className={`h-4 w-4 transition ${megaOpen ? "rotate-180" : ""}`} />
+                <span className={`absolute -bottom-1 left-0 h-0.5 rounded-full bg-[var(--primary)] transition-all duration-300 ${(pathname === "/services" || pathname === "/erp") ? "w-full" : "w-0 group-hover:w-full"}`} />
               </motion.button>
 
               <AnimatePresence>
@@ -127,18 +138,25 @@ export function Navbar() {
               .map((link) => {
                 const active = pathname === link.href;
                 return (
-                  <Link
+                  <motion.div
                     key={link.href}
-                    href={link.href}
-                    className={`theme-transition ${active ? "text-[var(--primary)]" : "text-[var(--text-muted)] hover:text-[var(--primary)]"}`}
+                    whileHover={{ y: -2, scale: 1.04 }}
+                    whileTap={{ scale: 0.98 }}
+                    transition={{ type: "spring", stiffness: 320, damping: 20 }}
                   >
-                    {link.label}
-                  </Link>
+                    <Link
+                      href={link.href}
+                      className={`group theme-transition relative inline-flex ${active ? "text-[var(--primary)]" : "text-[var(--text-muted)] hover:text-[var(--primary)]"}`}
+                    >
+                      <span>{link.label}</span>
+                      <span className={`absolute -bottom-1 left-0 h-0.5 rounded-full bg-[var(--primary)] transition-all duration-300 ${active ? "w-full" : "w-0 group-hover:w-full"}`} />
+                    </Link>
+                  </motion.div>
                 );
               })}
           </div>
 
-          <div className="hidden items-center gap-3 lg:flex">
+          <div className="relative z-10 hidden items-center gap-3 lg:flex">
             <ThemeSelector />
             <ThemeToggle />
             <AnimatedButton href="/contact" className="px-5 py-2.5">
@@ -146,7 +164,7 @@ export function Navbar() {
             </AnimatedButton>
           </div>
 
-          <div className="flex items-center gap-2 lg:hidden">
+          <div className="relative z-10 flex items-center gap-2 lg:hidden">
             <ThemeSelector />
             <ThemeToggle />
             <motion.button
