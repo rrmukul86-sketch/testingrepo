@@ -9,11 +9,14 @@ export function ThemeToggle() {
   const isDark = theme === "dark";
 
   return (
-    <button
+    <motion.button
       type="button"
       onClick={toggleTheme}
       className="theme-transition relative inline-flex h-11 w-20 items-center rounded-full border px-1.5 theme-surface-strong"
       aria-label="Toggle dark mode"
+      whileHover={{ y: -2, scale: 1.03, boxShadow: "0 14px 30px var(--glow)" }}
+      whileTap={{ scale: 0.96 }}
+      transition={{ type: "spring", stiffness: 320, damping: 20 }}
     >
       <motion.span
         className="absolute left-1.5 top-1.5 h-8 w-8 rounded-full bg-[var(--primary)]"
@@ -24,6 +27,6 @@ export function ThemeToggle() {
         <Sun className={`h-4 w-4 ${isDark ? "opacity-50" : "opacity-100"}`} />
         <Moon className={`h-4 w-4 ${isDark ? "opacity-100" : "opacity-50"}`} />
       </span>
-    </button>
+    </motion.button>
   );
 }

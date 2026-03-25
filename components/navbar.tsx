@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, Menu, Sparkles, X } from "lucide-react";
 import { useCallback, useRef, useState } from "react";
 import { AnimatedButton } from "@/components/animated-button";
+import { ThemeSelector } from "@/components/theme-selector";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { useClickOutside } from "@/hooks/use-click-outside";
 import { useScrollState } from "@/hooks/use-scroll-state";
@@ -63,14 +64,17 @@ export function Navbar() {
               onMouseEnter={() => setMegaOpen(true)}
               onMouseLeave={() => setMegaOpen(false)}
             >
-              <button
+              <motion.button
                 type="button"
                 onClick={() => setMegaOpen((current) => !current)}
                 className={`theme-transition inline-flex items-center gap-1 ${pathname === "/services" || pathname === "/erp" ? "text-[var(--primary)]" : "text-[var(--text-muted)] hover:text-[var(--primary)]"}`}
+                whileHover={{ y: -2, scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                transition={{ type: "spring", stiffness: 320, damping: 20 }}
               >
                 Services
                 <ChevronDown className={`h-4 w-4 transition ${megaOpen ? "rotate-180" : ""}`} />
-              </button>
+              </motion.button>
 
               <AnimatePresence>
                 {megaOpen ? (
@@ -135,6 +139,7 @@ export function Navbar() {
           </div>
 
           <div className="hidden items-center gap-3 lg:flex">
+            <ThemeSelector />
             <ThemeToggle />
             <AnimatedButton href="/contact" className="px-5 py-2.5">
               Contact Us
@@ -142,15 +147,19 @@ export function Navbar() {
           </div>
 
           <div className="flex items-center gap-2 lg:hidden">
+            <ThemeSelector />
             <ThemeToggle />
-            <button
+            <motion.button
               type="button"
               onClick={() => setMobileOpen((current) => !current)}
               className="theme-transition flex h-11 w-11 items-center justify-center rounded-full theme-surface-strong"
               aria-label="Toggle menu"
+              whileHover={{ y: -2, scale: 1.04, boxShadow: "0 14px 28px var(--glow)" }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 320, damping: 20 }}
             >
               {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-            </button>
+            </motion.button>
           </div>
         </nav>
 
@@ -174,14 +183,17 @@ export function Navbar() {
                   </Link>
 
                   <div className="rounded-2xl theme-surface-strong">
-                    <button
+                    <motion.button
                       type="button"
                       onClick={() => setMobileServicesOpen((current) => !current)}
                       className="flex w-full items-center justify-between px-4 py-3 text-sm font-medium text-[var(--heading)]"
+                      whileHover={{ scale: 1.01 }}
+                      whileTap={{ scale: 0.98 }}
+                      transition={{ type: "spring", stiffness: 320, damping: 20 }}
                     >
                       Services
                       <ChevronDown className={`h-4 w-4 transition ${mobileServicesOpen ? "rotate-180" : ""}`} />
-                    </button>
+                    </motion.button>
 
                     <AnimatePresence>
                       {mobileServicesOpen ? (

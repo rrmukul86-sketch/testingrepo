@@ -23,18 +23,21 @@ export function PricingSection() {
           <span className={`text-sm ${!showMultiplePlans ? "text-[var(--heading)]" : "text-[var(--text-muted)]"}`}>
             Single Plan
           </span>
-          <button
+          <motion.button
             type="button"
             onClick={() => setShowMultiplePlans((current) => !current)}
             className="relative h-8 w-16 rounded-full bg-[var(--surface-muted)]"
             aria-label="Toggle pricing mode"
+            whileHover={{ scale: 1.05, boxShadow: "0 10px 24px var(--glow)" }}
+            whileTap={{ scale: 0.96 }}
+            transition={{ type: "spring", stiffness: 320, damping: 20 }}
           >
             <motion.span
               className="absolute left-1 top-1 h-6 w-6 rounded-full bg-[linear-gradient(135deg,var(--primary),var(--accent))]"
               animate={{ x: showMultiplePlans ? 32 : 0 }}
               transition={{ type: "spring", stiffness: 320, damping: 24 }}
             />
-          </button>
+          </motion.button>
           <span className={`text-sm ${showMultiplePlans ? "text-[var(--heading)]" : "text-[var(--text-muted)]"}`}>
             Multiple Plans
           </span>

@@ -77,7 +77,7 @@ export function AutoImageSlider({
 
       <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 gap-2">
         {safeImages.map((image, imageIndex) => (
-          <button
+          <motion.button
             key={image.src}
             type="button"
             onClick={() => setIndex(imageIndex)}
@@ -85,6 +85,9 @@ export function AutoImageSlider({
               imageIndex === index ? "w-8 bg-[var(--surface-strong)]" : "w-2.5 bg-[color:var(--surface-strong)]/50"
             }`}
             aria-label={`Show slide ${imageIndex + 1}`}
+            whileHover={{ scale: 1.18 }}
+            whileTap={{ scale: 0.92 }}
+            transition={{ type: "spring", stiffness: 320, damping: 20 }}
           />
         ))}
       </div>
