@@ -21,6 +21,7 @@ export const navLinks = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
   { label: "Power Platform", href: "/erp" },
+  { label: "Clients", href: "/clients" },
   { label: "Pricing", href: "/pricing" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" }
@@ -213,6 +214,17 @@ export const productModules = [
       "Inspection apps, request apps, and internal service apps",
       "Operational teams replacing manual tracking sheets",
       "Businesses that need task-driven app experiences quickly"
+    ],
+    projects: [
+      "Asset management app",
+      "Leave management app",
+      "HR employee module",
+      "Visitor management app",
+      "Expense claim app",
+      "Helpdesk request app",
+      "Purchase request app",
+      "Vehicle tracking app",
+      "Site inspection app"
     ]
   },
   {
@@ -231,6 +243,17 @@ export const productModules = [
       "Teams struggling with email-based approvals",
       "Businesses that need faster turnaround and better tracking",
       "Departments that want repeatable digital workflows"
+    ],
+    projects: [
+      "Leave approval flow",
+      "Document approval flow",
+      "Invoice processing automation",
+      "Reminder and escalation workflow",
+      "Employee onboarding automation",
+      "Purchase approval process",
+      "Daily reporting automation",
+      "Ticket routing flow",
+      "Notification workflow for field teams"
     ]
   },
   {
@@ -249,6 +272,17 @@ export const productModules = [
       "Service operations and CRM-style business processes",
       "Teams managing high-volume records with approvals",
       "Organizations needing structured governance in applications"
+    ],
+    projects: [
+      "Customer issue tracking system",
+      "Sales follow-up module",
+      "Service request lifecycle app",
+      "Vendor onboarding system",
+      "Project management tracker",
+      "Compliance review app",
+      "Contract management module",
+      "Branch operations tracker",
+      "Employee grievance system"
     ]
   },
   {
@@ -267,6 +301,17 @@ export const productModules = [
       "Leadership teams reviewing digital operations",
       "Managers tracking approvals, tasks, and service delivery",
       "Organizations combining data from multiple systems"
+    ],
+    projects: [
+      "Power BI operations dashboard",
+      "Approval status analytics",
+      "Sales and lead reporting",
+      "Asset performance dashboard",
+      "HR activity insights",
+      "Support SLA dashboard",
+      "Executive KPI reporting",
+      "Workflow health dashboard",
+      "Integration monitoring report"
     ]
   },
   {
@@ -285,6 +330,17 @@ export const productModules = [
       "Businesses refreshing their digital presence",
       "Teams launching product, service, or partner portals",
       "Organizations needing websites connected to business systems"
+    ],
+    projects: [
+      "Corporate website build",
+      "Service portfolio website",
+      "Client self-service portal",
+      "Lead capture landing page",
+      "Employee portal website",
+      "Vendor portal interface",
+      "Partner registration portal",
+      "Internal dashboard portal",
+      "Marketing website redesign"
     ]
   },
   {
@@ -303,6 +359,17 @@ export const productModules = [
       "Businesses needing more than standard packaged software",
       "Teams creating client, vendor, or internal operational tools",
       "Organizations combining apps, automation, and reporting in one experience"
+    ],
+    projects: [
+      "ERP and CRM integration",
+      "Website and Power Apps integration",
+      "Payment gateway integration",
+      "Attendance system integration",
+      "WhatsApp notification integration",
+      "Email and document sync integration",
+      "Third-party API connector build",
+      "Custom admin application",
+      "Operations control panel"
     ]
   }
 ];
@@ -471,6 +538,15 @@ export const contactDetails = [
   { label: "Email", value: "hello@krishya.in" },
   { label: "Phone", value: "+91 99999 99999" },
   { label: "Office", value: "India | Power Platform, integration, website, and app delivery" }
+];
+
+export const clientLogos = [
+  { name: "Online24x7 Pvt. Ltd." },
+  { name: "Gigmos Solutions Pvt. Ltd." },
+  { name: "Teach Mahindra" },
+  { name: "Comviva Technologies Ltd." },
+  { name: "SKT Wellcare Pvt. Ltd." },
+  { name: "LMT Mines & Minerals Pvt. Ltd." }
 ];
 
 export const socialLinks = [

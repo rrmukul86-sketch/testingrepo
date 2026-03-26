@@ -32,8 +32,8 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
       <PageHero badge="Solution Module" title={module.title} description={module.overview} />
 
       <section className="section-shell py-20 md:py-24">
-        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="theme-transition rounded-[2rem] p-8 glass-panel md:p-10">
+        <div className="grid gap-8 lg:items-start lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="theme-transition self-start rounded-[2rem] p-8 glass-panel md:p-10">
             <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,var(--primary),var(--accent))] text-white shadow-[0_18px_40px_var(--glow)]">
               <Icon className="h-6 w-6" />
             </div>
@@ -71,6 +71,20 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
                       0{index + 1}
                     </div>
                     <p className="mt-3 text-sm leading-7 text-[var(--text-muted)]">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="theme-transition rounded-[2rem] p-8 theme-surface-strong theme-ring md:p-10">
+              <h2 className="section-heading">Project Examples</h2>
+              <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+                {module.projects.map((project, index) => (
+                  <div key={project} className="theme-transition rounded-[1.25rem] p-5 theme-surface-muted">
+                    <div className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--primary)]">
+                      Project 0{index + 1}
+                    </div>
+                    <p className="mt-3 text-sm leading-7 text-[var(--text-muted)]">{project}</p>
                   </div>
                 ))}
               </div>
