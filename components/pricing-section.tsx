@@ -14,14 +14,14 @@ export function PricingSection() {
     <section className="section-shell py-20 md:py-24">
       <div className="flex flex-col items-center text-center">
         <SectionBadge>Pricing</SectionBadge>
-        <h2 className="section-heading mt-6">Flip between single and multiple plan pricing modes.</h2>
+        <h2 className="section-heading mt-6">Engagement models for focused builds and larger solution rollouts.</h2>
         <p className="section-copy mx-auto mt-5">
-          Toggle the switch and every pricing card flips in 3D to reveal a different pricing story and a deeper CTA.
+          Use these plans as a flexible starting point for Power Platform builds, integrations, websites, and custom applications.
         </p>
 
         <div className="mt-8 flex items-center gap-4 rounded-full px-4 py-3 theme-surface-strong">
           <span className={`text-sm ${!showMultiplePlans ? "text-[var(--heading)]" : "text-[var(--text-muted)]"}`}>
-            Single Plan
+            Focused Scope
           </span>
           <motion.button
             type="button"
@@ -39,7 +39,7 @@ export function PricingSection() {
             />
           </motion.button>
           <span className={`text-sm ${showMultiplePlans ? "text-[var(--heading)]" : "text-[var(--text-muted)]"}`}>
-            Multiple Plans
+            Broader Rollout
           </span>
         </div>
       </div>
@@ -86,7 +86,7 @@ export function PricingSection() {
                 <div className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--primary)]">{plan.altLabel}</div>
                 <div className="mt-4 text-5xl font-bold tracking-tight text-[var(--heading)]">{plan.altPrice}</div>
                 <p className="mt-4 text-sm leading-7 text-[var(--text-muted)]">
-                  A richer plan view with implementation-oriented detail, ideal for premium service packaging.
+                  A broader delivery view that fits multi-module app, automation, integration, or website engagements.
                 </p>
 
                 <div className="mt-8 space-y-4">

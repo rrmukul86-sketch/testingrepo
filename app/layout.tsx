@@ -3,9 +3,9 @@ import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "CompactSoft | Smart IT Solutions",
+  title: "Krishya | Smart IT Solutions",
   description:
-    "A modern corporate SaaS website for ERP, payroll, cloud, and automation solutions."
+    "A modern business website for Power Apps, Power Automate, model-driven apps, integrations, websites, and custom applications."
 };
 
 export default function RootLayout({

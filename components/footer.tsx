@@ -15,14 +15,27 @@ export function Footer() {
                 <Sparkles className="h-4 w-4" />
               </span>
               <div>
-                <div className="font-semibold">CompactSoft</div>
-                <div className="text-sm text-[var(--text-muted)]">Premium SaaS-style business software presence.</div>
+                <div className="font-semibold">Krishya</div>
+                <div className="text-sm text-[var(--text-muted)]">Power Platform and custom digital solution partner.</div>
               </div>
             </div>
 
             <p className="mt-5 text-sm leading-7 text-[var(--text-muted)]">
-              Designed to feel modern, responsive, and polished across light and dark mode.
+              Built to present Power Apps, Power Automate, model-driven apps, integrations, websites,
+              and application delivery with clear business messaging and a polished experience.
             </p>
+
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              {[
+                { label: "Power Platform", value: "Apps, automation, and integration delivery" },
+                { label: "Custom build", value: "Websites, portals, and business applications" }
+              ].map((item) => (
+                <div key={item.label} className="theme-transition rounded-2xl px-4 py-3 theme-surface-strong">
+                  <div className="text-sm font-semibold text-[var(--heading)]">{item.label}</div>
+                  <div className="mt-1 text-xs leading-5 text-[var(--text-muted)]">{item.value}</div>
+                </div>
+              ))}
+            </div>
 
             <div className="mt-6 flex gap-3">
               {[
@@ -97,6 +110,18 @@ export function Footer() {
                 <MapPin className="mt-0.5 h-4 w-4 text-[var(--primary)]" />
                 <span>{contactDetails[2]?.value}</span>
               </div>
+            </div>
+
+            <div className="mt-6 rounded-[1.5rem] bg-[linear-gradient(135deg,var(--primary),var(--accent))] p-5 text-white shadow-[0_20px_50px_var(--glow)]">
+              <div className="text-xs uppercase tracking-[0.18em] text-white/75">Need a demo</div>
+              <p className="mt-3 text-sm leading-6 text-white/85">
+                Use the contact form to discuss Power Apps, Power Automate, model-driven apps, integrations,
+                website delivery, or a custom application build.
+              </p>
+              <Link href="/contact" className="mt-4 inline-flex items-center gap-2 text-sm font-semibold">
+                Contact our team
+                <ArrowUpRight className="h-4 w-4" />
+              </Link>
             </div>
           </div>
         </div>

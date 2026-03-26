@@ -20,16 +20,22 @@ import {
 export const navLinks = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
-  { label: "ERP", href: "/erp" },
+  { label: "Power Platform", href: "/erp" },
   { label: "Pricing", href: "/pricing" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" }
 ];
 
 export const heroStats = [
-  { value: "25,000+", label: "Clients served" },
-  { value: "29+", label: "Years experience" },
-  { value: "120+", label: "Implementation specialists" }
+  { value: "120+", label: "Apps and portals delivered" },
+  { value: "85+", label: "Automated workflows launched" },
+  { value: "40+", label: "Integration projects completed" }
+];
+
+export const heroPillars = [
+  "Power Apps, Power Automate, and model-driven app delivery aligned to business workflows",
+  "Third-party integrations that connect Microsoft, CRM, ERP, websites, and internal tools",
+  "Custom websites and business applications built for operations, reporting, and growth"
 ];
 
 export const heroSlides = [
@@ -49,142 +55,142 @@ export const heroSlides = [
 
 export const services = [
   {
-    title: "ERP Solutions",
+    title: "Power Apps Development",
     description:
-      "Integrated business software for finance, stock, operations, procurement, and reporting.",
+      "Build canvas apps for operations, approvals, field teams, checklists, and internal business workflows.",
     longDescription:
-      "Unify finance, inventory, procurement, reporting, and operational visibility in one structured ERP environment built for scaling businesses.",
+      "We design Power Apps solutions that replace manual forms, spreadsheets, and disconnected processes with responsive apps tailored to your teams.",
     icon: BriefcaseBusiness,
     href: "/erp",
     features: [
-      "Finance, stock, and procurement in one connected workflow",
-      "Custom user roles and approval routing",
-      "Executive dashboards and department-level reporting"
+      "Canvas apps for HR, operations, audit, and service teams",
+      "Role-aware forms, status flows, and connected data sources",
+      "Mobile-friendly experiences for internal business use"
     ],
     images: [
       {
         src: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80",
-        alt: "ERP planning"
+        alt: "Power Apps planning session"
       },
       {
         src: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80",
-        alt: "ERP dashboard"
+        alt: "Business app dashboard"
       },
       {
         src: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
-        alt: "ERP collaboration"
+        alt: "App delivery workshop"
       }
     ]
   },
   {
-    title: "Cloud Services",
+    title: "Power Automate Solutions",
     description:
-      "Managed hosting, backup systems, remote access, migration support, and scalable infrastructure.",
+      "Automate approvals, notifications, document routing, reminders, and multi-step business processes.",
     longDescription:
-      "Build secure, cloud-ready business environments with backup automation, remote access, and infrastructure planning designed for uptime and resilience.",
+      "We streamline repetitive work with Power Automate flows that reduce manual follow-up, improve accountability, and speed up delivery across teams.",
     icon: Cloud,
     href: "/services",
     features: [
-      "Cloud migration and environment setup",
-      "Business continuity with automated backups",
-      "Scalable remote access and managed hosting"
+      "Approval flows, reminders, escalations, and notifications",
+      "Document movement between Microsoft 365 and external systems",
+      "Automation for sales, HR, finance, and support operations"
     ],
     images: [
       {
         src: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
-        alt: "Cloud infrastructure"
+        alt: "Automation planning board"
       },
       {
         src: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80",
-        alt: "Cloud services team"
+        alt: "Power Automate workflow team"
       },
       {
         src: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-        alt: "Server environment"
+        alt: "Business automation workspace"
       }
     ]
   },
   {
-    title: "Payroll Management",
+    title: "Model-Driven Apps",
     description:
-      "Attendance, salary processing, deductions, compliance, and employee record handling.",
+      "Structured model-driven apps for process-heavy teams that need governed data and role-based workflows.",
     longDescription:
-      "Reduce payroll complexity with a cleaner employee workflow that covers attendance, salary processing, compliance checks, and reporting visibility.",
+      "Model-driven apps help organizations manage records, processes, approvals, and customer or operational data in a scalable, governed environment.",
     icon: CreditCard,
     href: "/services",
     features: [
-      "Attendance and leave sync",
-      "Salary cycles and statutory deductions",
-      "Payslip distribution and audit-ready history"
+      "Role-based views, forms, and business process stages",
+      "Dataverse-backed solutions for structured operations",
+      "Scalable application architecture for growing teams"
     ],
     images: [
       {
         src: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
-        alt: "Payroll team"
+        alt: "Model-driven app team"
       },
       {
         src: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=80",
-        alt: "Payroll documents"
+        alt: "Structured records workspace"
       },
       {
         src: "https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80",
-        alt: "Billing operations"
+        alt: "Dataverse process management"
       }
     ]
   },
   {
-    title: "POS & Billing",
+    title: "Third-Party Integrations",
     description:
-      "Retail billing, stock visibility, receipt generation, and outlet-level sales tracking.",
+      "Connect Microsoft tools with ERP, CRM, payment platforms, websites, and external APIs.",
     longDescription:
-      "Support stores and branch networks with efficient billing, stock movement, receipt workflows, and location-wise reporting.",
+      "We design and implement integrations that keep data flowing between business platforms so teams can work without duplicate entry and fragmented reporting.",
     icon: ScanSearch,
     href: "/services",
     features: [
-      "Fast billing and receipt workflows",
-      "Item-level stock and outlet visibility",
-      "Daily, weekly, and branch-level reporting"
+      "API-based integrations across internal and external systems",
+      "Data sync for customers, orders, forms, and operational records",
+      "Cleaner reporting through connected information flows"
     ],
     images: [
       {
         src: "https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80",
-        alt: "Point of sale system"
+        alt: "Third-party integration dashboard"
       },
       {
         src: "https://images.unsplash.com/photo-1515169067868-5387ec356754?auto=format&fit=crop&w=1200&q=80",
-        alt: "Retail billing setup"
+        alt: "Connected systems workshop"
       },
       {
         src: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80",
-        alt: "Store operations"
+        alt: "API integration planning"
       }
     ]
   },
   {
-    title: "E-commerce Solutions",
+    title: "Websites & Custom Applications",
     description:
-      "Sync products, orders, inventory, and customer data across websites and marketplaces.",
+      "Create websites, client portals, internal tools, and tailored web applications for your business.",
     longDescription:
-      "Create better coordination between your online storefronts, backend systems, and inventory movement using practical integration workflows.",
+      "From marketing websites to business applications, we build digital experiences that combine strong design, useful workflows, and the integrations your teams need.",
     icon: ShoppingCart,
     href: "/services",
     features: [
-      "Marketplace and store sync",
-      "Order, shipping, and inventory alignment",
-      "Connected commerce reporting"
+      "Corporate websites, portals, and application interfaces",
+      "Custom forms, dashboards, and process-driven web modules",
+      "Integrated delivery with Power Platform and external tools"
     ],
     images: [
       {
         src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
-        alt: "E-commerce analytics"
+        alt: "Website and application analytics"
       },
       {
         src: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80",
-        alt: "Commerce team"
+        alt: "Web application delivery team"
       },
       {
         src: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80",
-        alt: "Online business"
+        alt: "Custom digital platform"
       }
     ]
   }
@@ -192,78 +198,160 @@ export const services = [
 
 export const productModules = [
   {
-    title: "HRMS Add-ons",
-    description: "Dummy modules for leave, attendance, onboarding, and employee lifecycle tracking.",
-    icon: Users
+    slug: "hrms-add-ons",
+    title: "Canvas Apps",
+    description: "Custom Power Apps for inspections, requests, checklists, onboarding, and internal workflows.",
+    icon: Users,
+    overview:
+      "Canvas Apps are ideal for teams that need focused, user-friendly applications connected to Microsoft 365, Dataverse, SharePoint, or external systems.",
+    highlights: [
+      "Responsive apps for desktop, tablet, and field usage",
+      "Connected forms, approvals, and operational actions",
+      "Faster replacement of spreadsheet-driven processes"
+    ],
+    useCases: [
+      "Inspection apps, request apps, and internal service apps",
+      "Operational teams replacing manual tracking sheets",
+      "Businesses that need task-driven app experiences quickly"
+    ]
   },
   {
+    slug: "workflow-automation",
     title: "Workflow Automation",
-    description: "Approval routing, reminders, escalations, and recurring process automations.",
-    icon: Workflow
+    description: "Power Automate flows for approvals, reminders, escalations, notifications, and document routing.",
+    icon: Workflow,
+    overview:
+      "Workflow Automation helps teams reduce repetitive manual work and build reliable approval and notification processes across Microsoft and third-party platforms.",
+    highlights: [
+      "Approval stages for HR, finance, sales, and operations",
+      "Escalation rules for pending requests and tasks",
+      "Automated alerts and handoffs across systems"
+    ],
+    useCases: [
+      "Teams struggling with email-based approvals",
+      "Businesses that need faster turnaround and better tracking",
+      "Departments that want repeatable digital workflows"
+    ]
   },
   {
-    title: "Cloud Backup Suite",
-    description: "Daily backup flows, sync dashboards, and restore checkpoints for business systems.",
-    icon: ServerCog
+    slug: "cloud-backup-suite",
+    title: "Model-Driven Solutions",
+    description: "Dataverse-based model-driven apps for record management, lifecycle processes, and governed workflows.",
+    icon: ServerCog,
+    overview:
+      "Model-driven solutions are designed for organizations that need structured records, governed permissions, process stages, and scalable business application architecture.",
+    highlights: [
+      "Dataverse-first architecture for process-heavy teams",
+      "Role-based forms, dashboards, and lifecycle stages",
+      "Scalable structure for customer, service, and operations data"
+    ],
+    useCases: [
+      "Service operations and CRM-style business processes",
+      "Teams managing high-volume records with approvals",
+      "Organizations needing structured governance in applications"
+    ]
   },
   {
+    slug: "reporting-hub",
     title: "Reporting Hub",
-    description: "Visual dashboards for finance, inventory, payroll, and executive-level insights.",
-    icon: ChartNoAxesCombined
+    description: "Dashboards and reporting experiences built around app usage, operations, approvals, and business KPIs.",
+    icon: ChartNoAxesCombined,
+    overview:
+      "Reporting Hub turns operational data into clear dashboards so managers can monitor app activity, team performance, approvals, and delivery outcomes.",
+    highlights: [
+      "Role-based dashboards for leaders and delivery teams",
+      "Operational views across apps, flows, and integrations",
+      "Visual KPI experiences designed for quick decisions"
+    ],
+    useCases: [
+      "Leadership teams reviewing digital operations",
+      "Managers tracking approvals, tasks, and service delivery",
+      "Organizations combining data from multiple systems"
+    ]
   },
   {
-    title: "Support Desk Tools",
-    description: "Ticket handling, request tracking, SLA monitoring, and service workflows.",
-    icon: Headset
+    slug: "support-desk-tools",
+    title: "Website Delivery",
+    description: "Corporate websites, portals, landing pages, and modern web experiences for growing businesses.",
+    icon: Headset,
+    overview:
+      "Website Delivery covers branded business websites and portals that support lead generation, customer communication, service presentation, and digital engagement.",
+    highlights: [
+      "Modern responsive websites with strong information architecture",
+      "Landing pages, service pages, and portal-ready interfaces",
+      "Delivery aligned with integrations and business goals"
+    ],
+    useCases: [
+      "Businesses refreshing their digital presence",
+      "Teams launching product, service, or partner portals",
+      "Organizations needing websites connected to business systems"
+    ]
   },
   {
-    title: "Custom Integrations",
-    description: "Dummy APIs and connectors to bridge ERP, CRM, billing, and cloud ecosystems.",
-    icon: Blocks
+    slug: "custom-integrations",
+    title: "Custom Applications",
+    description: "Tailored web applications built around business logic, user roles, reporting, and integrations.",
+    icon: Blocks,
+    overview:
+      "Custom applications help businesses solve specific operational challenges with purpose-built interfaces, workflows, dashboards, and connected platform architecture.",
+    highlights: [
+      "Custom business modules tailored to your exact process",
+      "Integrated delivery across Microsoft and third-party platforms",
+      "Application journeys designed for usability and scale"
+    ],
+    useCases: [
+      "Businesses needing more than standard packaged software",
+      "Teams creating client, vendor, or internal operational tools",
+      "Organizations combining apps, automation, and reporting in one experience"
+    ]
   }
 ];
 
+export function getProductModuleBySlug(slug: string) {
+  return productModules.find((module) => module.slug === slug);
+}
+
 export const pricingPlans = [
   {
-    name: "Basic",
-    price: "$49",
-    description: "A starter plan for smaller teams.",
-    features: ["Core modules", "Email support", "Standard onboarding"],
-    detailedFeatures: ["Setup consultation", "Basic workflow templates", "Monthly performance summary"],
-    altPrice: "$399",
-    altLabel: "Single rollout",
-    altFeatures: ["One-time implementation", "Admin training", "Single department setup"],
-    cta: "Get Started"
+    name: "Starter",
+    price: "Custom",
+    description: "A focused engagement for a single app, workflow, or landing website.",
+    features: ["Single solution scope", "Discovery workshop", "Delivery planning"],
+    detailedFeatures: ["Canvas app or website starter build", "Basic automation setup", "Handover and guidance"],
+    altPrice: "Project",
+    altLabel: "Quick launch",
+    altFeatures: ["Small team rollout", "Focused timeline", "Business-ready starter delivery"],
+    cta: "Start Project"
   },
   {
-    name: "Standard",
-    price: "$129",
-    description: "The most balanced option for growing teams.",
-    features: ["ERP + payroll", "Priority support", "Reporting dashboard"],
-    detailedFeatures: ["Cross-team workflow mapping", "Advanced dashboards", "Cloud readiness review"],
-    altPrice: "$999",
-    altLabel: "Multi-team rollout",
-    altFeatures: ["3 department setup", "Advanced onboarding", "Priority implementation lead"],
-    cta: "Choose Standard",
+    name: "Growth",
+    price: "Custom",
+    description: "A balanced package for apps, automation, integrations, and reporting.",
+    features: ["Multi-module delivery", "Integration planning", "Priority collaboration"],
+    detailedFeatures: ["Cross-team workflow mapping", "Reporting and dashboard design", "Structured rollout support"],
+    altPrice: "Scale",
+    altLabel: "Business rollout",
+    altFeatures: ["Department-wide implementation", "Automation and app bundle", "Delivery lead involvement"],
+    cta: "Plan Rollout",
     featured: true
   },
   {
     name: "Enterprise",
     price: "Custom",
-    description: "Designed around complex delivery needs.",
-    features: ["Custom workflows", "Dedicated manager", "Advanced controls"],
-    detailedFeatures: ["Custom integrations", "Branch rollout strategy", "Security and governance review"],
+    description: "Designed for larger businesses with complex systems, governance, and integrations.",
+    features: ["Platform architecture", "Dedicated engagement lead", "Enterprise controls"],
+    detailedFeatures: ["Custom integrations", "Governance and environment planning", "Enterprise solution roadmap"],
     altPrice: "Custom",
-    altLabel: "Enterprise bundle",
-    altFeatures: ["Tailored implementation scope", "Dedicated success team", "Custom support SLA"],
+    altLabel: "Strategic delivery",
+    altFeatures: ["Tailored implementation scope", "Cross-platform architecture", "Ongoing optimization support"],
     cta: "Talk to Sales"
   }
 ];
 
 export const aboutStats = [
-  { value: 25000, suffix: "+", label: "Businesses supported" },
-  { value: 29, suffix: "+", label: "Years in IT solutions" },
-  { value: 98, suffix: "%", label: "Client retention on support plans" }
+  { value: 120, suffix: "+", label: "Apps and digital solutions delivered" },
+  { value: 85, suffix: "+", label: "Workflow automations launched" },
+  { value: 96, suffix: "%", label: "Projects delivered with repeat engagements" }
 ];
 
 export const aboutSlides = [
@@ -281,63 +369,108 @@ export const aboutSlides = [
   }
 ];
 
-export const whyChooseUs = [
+export const deliveryJourney = [
   {
-    title: "Trusted delivery",
-    description: "Years of hands-on delivery across finance, manufacturing, retail, and services.",
+    title: "Discovery & solution mapping",
+    description: "We understand your process, users, current tools, and outcomes before we shape the application or automation approach.",
+    metric: "Week 1",
+    icon: Workflow
+  },
+  {
+    title: "Design & build",
+    description: "Apps, flows, dashboards, integrations, and interface layers are built around your actual business workflow and user roles.",
+    metric: "2-4 weeks",
+    icon: Cloud
+  },
+  {
+    title: "Testing & go-live",
+    description: "Users validate the solution, the rollout is staged properly, and launch support is handled with practical coordination.",
+    metric: "Go-live",
+    icon: Users
+  },
+  {
+    title: "Support & optimization",
+    description: "Post-launch work includes refinements, additional automation, reporting improvements, and long-term platform evolution.",
+    metric: "Ongoing",
+    icon: Headset
+  }
+];
+
+export const businessOutcomes = [
+  {
+    title: "Faster internal execution",
+    description: "Teams work with digital forms, guided processes, and connected systems instead of manual follow-up and repeated data entry.",
+    icon: ChartNoAxesCombined
+  },
+  {
+    title: "Stronger process control",
+    description: "Role-based access, tracked approvals, and governed application design bring better visibility and accountability to operations.",
     icon: Lock
   },
   {
-    title: "Responsive support",
-    description: "Fast post-sales help for onboarding, troubleshooting, upgrades, and training.",
+    title: "Scalable digital foundation",
+    description: "Power Platform, integrations, and custom applications create a foundation you can extend as teams, processes, and services grow.",
+    icon: BriefcaseBusiness
+  }
+];
+
+export const whyChooseUs = [
+  {
+    title: "Platform-focused delivery",
+    description: "We build around Power Apps, Power Automate, model-driven apps, and practical business process design.",
+    icon: Lock
+  },
+  {
+    title: "Responsive collaboration",
+    description: "From discovery to post-launch support, we stay involved as your team refines the solution.",
     icon: LifeBuoy
   },
   {
     title: "Automation mindset",
-    description: "We reduce repetitive work through clean business workflows and system design.",
+    description: "We look for opportunities to remove repeated manual tasks and improve operational flow.",
     icon: Sparkles
   },
   {
-    title: "Scalable systems",
-    description: "Solutions grow with your teams, branches, processes, and reporting needs.",
+    title: "Built for growth",
+    description: "Websites, apps, automations, and integrations are planned so they can grow with your business.",
     icon: Wrench
   }
 ];
 
 export const erpModules = [
   {
-    title: "Finance & Accounting",
-    description: "Dummy ledgers, vouchers, receivables, payables, and compliance-friendly reporting.",
+    title: "Canvas App Experiences",
+    description: "Task-focused Power Apps built for internal teams, mobile users, and operational workflows.",
     icon: Layers3
   },
   {
-    title: "Inventory Control",
-    description: "Track stock movement, warehouses, reorder levels, and item availability in one place.",
+    title: "Power Automate Flows",
+    description: "Approvals, alerts, document movement, and background automations connected to your apps and systems.",
     icon: Blocks
   },
   {
-    title: "Sales & Distribution",
-    description: "Manage quotations, orders, billing, delivery notes, and channel-level sales performance.",
+    title: "Model-Driven Architecture",
+    description: "Structured applications with Dataverse, governed roles, and scalable lifecycle processes.",
     icon: ShoppingCart
   },
   {
-    title: "Procurement",
-    description: "Vendor management, purchase requests, approvals, and GRN flow with dummy records.",
+    title: "Integration Layer",
+    description: "Connect websites, Microsoft tools, APIs, CRM platforms, and business systems into one working flow.",
     icon: Workflow
   }
 ];
 
 export const erpHighlights = [
-  "Dummy dashboard cards with live KPI-style visuals",
-  "Sample finance, stock, HR, and sales workflows",
-  "Cloud deployment ready architecture",
-  "Role-based views for admin, finance, and operations teams"
+  "Canvas apps and model-driven apps shaped around your business process",
+  "Power Automate workflows for approvals, reminders, and document routing",
+  "Integration planning across Microsoft 365, APIs, CRM, ERP, and websites",
+  "Scalable architecture for websites, portals, and custom applications"
 ];
 
 export const contactDetails = [
-  { label: "Email", value: "sales@compactsoftwares.in" },
+  { label: "Email", value: "hello@krishya.in" },
   { label: "Phone", value: "+91 99999 99999" },
-  { label: "Office", value: "India | Delivery and support across multiple industries" }
+  { label: "Office", value: "India | Power Platform, integration, website, and app delivery" }
 ];
 
 export const socialLinks = [
@@ -356,7 +489,7 @@ export const megaMenu = {
   busyAddOns: productModules.slice(0, 3).map((item) => ({
     title: item.title,
     description: item.description,
-    href: "/services",
+    href: `/products/${item.slug}`,
     icon: item.icon
   })),
   otherServices: services.slice(2).map((service) => ({

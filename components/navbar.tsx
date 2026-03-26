@@ -54,7 +54,7 @@ export function Navbar() {
             <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[linear-gradient(135deg,var(--primary),var(--accent))] text-white shadow-lg shadow-sky-200">
               <Sparkles className="h-4 w-4" />
             </span>
-            CompactSoft
+            Krishya
           </Link>
 
           <div className="relative z-10 hidden items-center gap-6 text-sm lg:flex">
@@ -97,9 +97,9 @@ export function Navbar() {
                   >
                     <div className="theme-transition grid gap-6 rounded-[2rem] p-6 glass-panel md:grid-cols-3">
                       {[
-                        { title: "BUSY Services", items: megaMenu.busyServices },
-                        { title: "BUSY Add-ons", items: megaMenu.busyAddOns },
-                        { title: "Other Services", items: megaMenu.otherServices }
+                        { title: "Platform Services", items: megaMenu.busyServices },
+                        { title: "Solution Modules", items: megaMenu.busyAddOns },
+                        { title: "Build Services", items: megaMenu.otherServices }
                       ].map((group) => (
                         <div key={group.title}>
                           <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--primary)]">

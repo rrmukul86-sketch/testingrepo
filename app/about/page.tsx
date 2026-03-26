@@ -8,8 +8,8 @@ export default function AboutPage() {
     <SiteLayout>
       <PageHero
         badge="About"
-        title="A long-term technology partner for ERP, payroll, cloud, and automation initiatives."
-        description="This page gives the brand a dedicated story instead of compressing everything into one landing page."
+        title="A long-term digital partner for Power Platform, integration, website, and application initiatives."
+        description="This page explains how we approach app delivery, workflow automation, connected systems, and scalable digital solutions."
       />
       <AboutSection />
       <WhyChooseUsSection />

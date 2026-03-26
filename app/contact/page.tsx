@@ -7,8 +7,8 @@ export default function ContactPage() {
     <SiteLayout>
       <PageHero
         badge="Contact"
-        title="Talk to us about ERP, payroll, cloud services, or custom automation."
-        description="Use the form below as a placeholder lead capture experience while backend handling is still being planned."
+        title="Talk to us about Power Apps, Power Automate, integrations, websites, or custom applications."
+        description="Use the form below to send your requirement directly to the backend and capture every inquiry in one place."
       />
       <ContactSection />
     </SiteLayout>

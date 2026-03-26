@@ -23,7 +23,7 @@ export function AutoImageSlider({
   images,
   className = "",
   imageClassName = "object-cover",
-  intervalMs = 2000
+  intervalMs = 5200
 }: AutoImageSliderProps) {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -54,24 +54,32 @@ export function AutoImageSlider({
       <AnimatePresence mode="wait">
         <motion.div
           key={safeImages[index]?.src}
-          initial={{ opacity: 0, scale: 1.02 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.99 }}
-          transition={{ duration: 0.55, ease: "easeOut" }}
+          initial={{ opacity: 0, scale: 1.08, rotate: -1.2 }}
+          animate={{ opacity: 1, scale: 1, rotate: 0 }}
+          exit={{ opacity: 0, scale: 0.96, rotate: 0.8 }}
+          transition={{ duration: 0.75, ease: "easeOut" }}
           className="absolute inset-0"
         >
-          <Image
-            fill
-            src={safeImages[index]?.src ?? fallbackImage}
-            alt={safeImages[index]?.alt ?? "Placeholder image"}
-            className={imageClassName}
-            onError={() =>
-              setFailedImages((current) => ({
-                ...current,
-                [images[index]?.src ?? ""]: true
-              }))
-            }
-          />
+          <motion.div
+            className="absolute inset-0"
+            animate={{ scale: [1.04, 1, 1.05], x: [0, -6, 0], y: [0, 4, 0] }}
+            transition={{ duration: Math.max(intervalMs / 1000, 4.2), repeat: Infinity, ease: "easeInOut" }}
+          >
+            <Image
+              fill
+              src={safeImages[index]?.src ?? fallbackImage}
+              alt={safeImages[index]?.alt ?? "Placeholder image"}
+              className={imageClassName}
+              onError={() =>
+                setFailedImages((current) => ({
+                  ...current,
+                  [images[index]?.src ?? ""]: true
+                }))
+              }
+            />
+          </motion.div>
+
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,transparent_30%,rgba(15,23,42,0.18)_100%)]" />
         </motion.div>
       </AnimatePresence>
 

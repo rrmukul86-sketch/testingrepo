@@ -11,9 +11,9 @@ export default function ErpPage() {
   return (
     <SiteLayout>
       <PageHero
-        badge="ERP Solutions"
-        title="A modern ERP experience with dummy content, visuals, and module previews."
-        description="This page showcases placeholder ERP content so you can continue refining structure, layout, and visual style before adding final business material."
+        badge="Power Platform"
+        title="Power Apps, Power Automate, model-driven apps, and integration delivery in one place."
+        description="Explore how we design business applications, automate workflows, and connect systems with scalable Microsoft-based solutions."
       />
 
       <section className="section-shell py-16 md:py-20">
@@ -25,10 +25,10 @@ export default function ErpPage() {
           </div>
 
           <div>
-            <h2 className="text-3xl font-semibold tracking-tight text-[var(--heading)]">Dummy ERP overview</h2>
+            <h2 className="text-3xl font-semibold tracking-tight text-[var(--heading)]">Power Platform solution overview</h2>
             <p className="mt-5 text-base leading-8 text-[var(--text-muted)]">
-              Use this section for ERP screenshots, workflow demos, client case studies, and module breakdowns.
-              The current content is intentionally placeholder so we can shape the site structure first.
+              Use this section to present Power Apps, automation flows, model-driven experiences, dashboards,
+              and integration examples that show how the platform supports your business operations.
             </p>
             <div className="mt-8 space-y-4">
               {erpHighlights.map((item) => (

@@ -48,10 +48,10 @@ export function AboutSection() {
           transition={{ duration: 0.6 }}
         >
           <SectionBadge>About</SectionBadge>
-          <h2 className="section-heading mt-6">A more credible corporate presence, now spread across real pages.</h2>
+          <h2 className="section-heading mt-6">A delivery partner focused on apps, automation, integration, and digital build work.</h2>
           <p className="section-copy mt-5">
-            The site is no longer compressed into a single landing page. This gives room for individual
-            service stories, ERP detail pages, and richer trust-building content.
+            We help businesses move from manual processes to connected digital workflows with Power Platform,
+            websites, custom applications, and third-party integrations tailored to how teams actually work.
           </p>
 
           <div className="mt-8 overflow-hidden rounded-[2rem] glass-panel">

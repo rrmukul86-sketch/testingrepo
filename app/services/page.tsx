@@ -8,8 +8,8 @@ export default function ServicesPage() {
     <SiteLayout>
       <PageHero
         badge="Services"
-        title="Business software services designed for clarity, speed, and long-term support."
-        description="Explore our ERP, payroll, POS, cloud, and integration offerings with placeholder visuals and demo-ready content."
+        title="Digital solution services designed for business workflows, usability, and scale."
+        description="Explore Power Apps, Power Automate, model-driven apps, integration services, website delivery, and custom application builds."
       />
       <ServicesSection />
       <ProductsSection />

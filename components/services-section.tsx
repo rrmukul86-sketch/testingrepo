@@ -16,10 +16,10 @@ export function ServicesSection() {
       <div className="theme-transition rounded-[2rem] p-8 shadow-sm theme-surface-strong md:p-12">
         <div className="flex flex-col items-center gap-4 text-center">
           <SectionBadge>Services</SectionBadge>
-          <h2 className="section-heading">Modern service modules in one consistent system.</h2>
+          <h2 className="section-heading">Services built around Microsoft Power Platform and custom delivery.</h2>
           <p className="section-copy max-w-2xl">
-            Explore ERP, cloud, payroll, POS, and e-commerce offerings through a shared visual language,
-            consistent spacing, and the same theme-driven colors used across the rest of the site.
+            Explore Power Apps, Power Automate, model-driven apps, third-party integrations, websites,
+            and custom applications through one clear service experience.
           </p>
         </div>
 

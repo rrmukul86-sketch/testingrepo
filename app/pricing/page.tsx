@@ -7,8 +7,8 @@ export default function PricingPage() {
     <SiteLayout>
       <PageHero
         badge="Pricing"
-        title="Simple pricing that scales from starter setups to enterprise deployments."
-        description="Use these placeholder plans as a starting point while final pricing, feature mapping, and service tiers are being prepared."
+        title="Flexible engagement models for apps, automation, integrations, websites, and custom builds."
+        description="Use these plans as a starting point while your final scope, delivery phases, and support model are being prepared."
       />
       <PricingSection />
     </SiteLayout>

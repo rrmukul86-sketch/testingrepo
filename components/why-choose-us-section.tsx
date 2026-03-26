@@ -10,9 +10,9 @@ export function WhyChooseUsSection() {
       <div className="theme-transition rounded-[2rem] p-8 md:p-12 theme-surface-strong theme-ring">
         <div className="flex flex-col gap-6 md:max-w-2xl">
           <SectionBadge>Why Choose Us</SectionBadge>
-          <h2 className="section-heading">Premium styling, practical business positioning.</h2>
+          <h2 className="section-heading">Practical digital delivery backed by real workflow thinking.</h2>
           <p className="section-copy">
-            This section keeps the corporate message clear while still feeling closer to modern SaaS product design.
+            We focus on solutions that teams can actually use, maintain, and expand as the business grows.
           </p>
         </div>
 
